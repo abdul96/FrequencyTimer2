@@ -3,7 +3,6 @@ FrequencyTimer2
  Modified by Tim Barrass, June 14 2013
  - added support for ATMEGA32U4 processors (Leonardo,Teensy2.0)
    using Timer 4 instead of Timer 2
-  - added conditional compilation to leave out the interrupt when using with Mozzi
   
 - Includes updates by Paul Stoffregen, paul@pjrc.com
   for compatibility with newer hardware and Arduino 1.0

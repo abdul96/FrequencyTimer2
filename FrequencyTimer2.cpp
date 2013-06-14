@@ -11,7 +11,6 @@
   Modified by Tim Barrass 2013, 
   -added support for ATMEGA32U4 processors (Leonardo,Teensy2.0)
   	using Timer 4 instead of Timer 2
-  - added conditional compilation to leave out the interrupt when using with Mozzi
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -36,8 +35,7 @@
 void (*FrequencyTimer2::onOverflow)() = 0;
 uint8_t FrequencyTimer2::enabled = 0;
 
-// include the interrupt if it's NOT being used with Mozzi audio synthesis library
-#ifndef MOZZIGUTS_H_
+
 #if defined(TIMER2_COMPA_vect)
 ISR(TIMER2_COMPA_vect)
 #elif defined(TIMER2_COMP_vect)
@@ -57,7 +55,7 @@ void dummy_function(void)
 	inHandler = 0;
     }
 }
-#endif
+
 
 void FrequencyTimer2::setOnOverflow( void (*func)() )
 {
