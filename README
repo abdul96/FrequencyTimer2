@@ -1,1 +1,12 @@
+FrequencyTimer2
+
+- Includes updates by Paul Stoffregen, paul@pjrc.com
+  for compatibility with newer hardware and Arduino 1.0
+  
+ Modified by Tim Barrass 2013, faveflave@gmail.com
+ - added support for ATMEGA32U4 processors (Leonardo,Teensy2.0)
+   using Timer 4 instead of Timer 2
+
+
+Original Readme:
 Update code from http://www.arduino.cc/playground/Code/FrequencyTimer2 for use with Arduino 0018 and the ATmega328 chip.
